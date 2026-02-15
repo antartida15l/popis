@@ -181,6 +181,15 @@ body {
   }
 }
 
+/* Flores - Desktop */
+.flowers {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0.7);
+  z-index: 2;
+}
+
 .flowers {
   position: relative;
   transform: scale(0.9);
@@ -1024,15 +1033,16 @@ body {
     font-size: 1rem;
   }
   
+  /* FLORES MÁS ARRIBA EN MÓVIL */
   .flowers {
-    transform: translateX(-50%) scale(0.6);
-    bottom: -20px;
+    transform: translateX(-50%) scale(0.6) translateY(50px);
+    bottom: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .message-container {
-    top: 8%;
+    top: 3%;
   }
   
   .animated-text {
@@ -1041,7 +1051,7 @@ body {
   }
   
   .play-button {
-    top: 16%;
+    top: 11%;
     padding: 8px 20px;
   }
   
@@ -1049,15 +1059,17 @@ body {
     font-size: 0.85rem;
   }
   
+  /* FLORES AÚN MÁS CENTRADAS */
   .flowers {
-    transform: translateX(-50%) scale(0.5);
-    bottom: -30px;
+    transform: translateX(-50%) scale(0.5) translateY(0);
+    bottom: 45%;
+    top: auto;
   }
 }
 
 @media (max-width: 380px) {
   .message-container {
-    top: 10%;
+    top: 2%;
   }
   
   .animated-text {
@@ -1066,7 +1078,7 @@ body {
   }
   
   .play-button {
-    top: 18%;
+    top: 10%;
     padding: 7px 18px;
   }
   
@@ -1075,32 +1087,39 @@ body {
   }
   
   .flowers {
-    transform: translateX(-50%) scale(0.45);
-    bottom: -40px;
+    transform: translateX(-50%) scale(0.45) translateY(-20px);
+    bottom: 42%;
   }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 700px) and (max-width: 480px) {
   .message-container {
-    top: 3%;
+    top: 1%;
   }
   
   .animated-text {
-    font-size: 0.7rem;
-    padding: 3px 6px;
+    font-size: 0.65rem;
+    padding: 3px 5px;
   }
   
   .play-button {
-    top: 12%;
-    padding: 5px 12px;
+    top: 9%;
+    padding: 6px 15px;
   }
   
   .play-button span {
-    font-size: 0.65rem;
+    font-size: 0.7rem;
   }
   
   .flowers {
-    transform: translateX(-50%) scale(0.4);
-    bottom: -50px;
+    transform: translateX(-50%) scale(0.4) translateY(-10px);
+    bottom: 40%;
+  }
+}
+
+@media (max-height: 600px) and (max-width: 480px) {
+  .flowers {
+    transform: translateX(-50%) scale(0.35) translateY(-30px);
+    bottom: 35%;
   }
 }
