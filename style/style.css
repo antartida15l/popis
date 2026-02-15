@@ -13,13 +13,12 @@
 }
 
 body {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  display: block;
   min-height: 100vh;
   background-color: var(--dark-color);
   overflow: hidden;
   perspective: 1000px;
+  position: relative;
 }
 
 .night {
@@ -1006,24 +1005,18 @@ body {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
-  body {
-    align-items: center;
-    justify-content: flex-end;
-    padding-bottom: 20px;
-  }
-  
   .message-container {
-    top: 3%;
+    top: 5%;
   }
   
   .animated-text {
-    font-size: clamp(0.85rem, 2.2vw, 1.5rem);
+    font-size: clamp(0.9rem, 2.5vw, 1.5rem);
     letter-spacing: 0.5px;
     padding: 6px 10px;
   }
   
   .play-button {
-    top: 11%;
+    top: 13%;
     padding: 10px 25px;
   }
   
@@ -1032,88 +1025,49 @@ body {
   }
   
   .flowers {
-    transform: scale(0.65);
-    margin-bottom: 0;
-    position: relative;
-    bottom: auto;
+    transform: translateX(-50%) scale(0.6);
+    bottom: -20px;
   }
 }
 
 @media (max-width: 480px) {
-  body {
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 10px;
-  }
-  
-  .message-container {
-    top: 5%;
-  }
-  
-  .animated-text {
-    font-size: clamp(0.7rem, 2vw, 1.2rem);
-    padding: 5px 8px;
-  }
-  
-  .play-button {
-    top: 13%;
-    padding: 8px 20px;
-  }
-  
-  .play-button span {
-    font-size: 0.9rem;
-  }
-  
-  .flowers {
-    transform: scale(0.55);
-    margin-bottom: 0;
-    margin-top: 0;
-  }
-}
-
-/* Para pantallas muy pequeñas */
-@media (max-width: 380px) {
-  body {
-    justify-content: center;
-  }
-  
   .message-container {
     top: 8%;
   }
   
   .animated-text {
-    font-size: 0.75rem;
-    padding: 4px 6px;
+    font-size: clamp(0.75rem, 2.2vw, 1.2rem);
+    padding: 5px 8px;
   }
   
   .play-button {
     top: 16%;
-    padding: 7px 18px;
+    padding: 8px 20px;
   }
   
   .play-button span {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
   
   .flowers {
-    transform: scale(0.45);
+    transform: translateX(-50%) scale(0.5);
+    bottom: -30px;
   }
 }
 
-/* Para pantallas horizontales en móvil */
-@media (max-height: 600px) {
+@media (max-width: 380px) {
   .message-container {
-    top: 2%;
+    top: 10%;
   }
   
   .animated-text {
-    font-size: 0.8rem;
-    padding: 4px 8px;
+    font-size: 0.7rem;
+    padding: 4px 6px;
   }
   
   .play-button {
-    top: 10%;
-    padding: 6px 15px;
+    top: 18%;
+    padding: 7px 18px;
   }
   
   .play-button span {
@@ -1121,6 +1075,32 @@ body {
   }
   
   .flowers {
-    transform: scale(0.4);
+    transform: translateX(-50%) scale(0.45);
+    bottom: -40px;
+  }
+}
+
+@media (max-height: 600px) {
+  .message-container {
+    top: 3%;
+  }
+  
+  .animated-text {
+    font-size: 0.7rem;
+    padding: 3px 6px;
+  }
+  
+  .play-button {
+    top: 12%;
+    padding: 5px 12px;
+  }
+  
+  .play-button span {
+    font-size: 0.65rem;
+  }
+  
+  .flowers {
+    transform: translateX(-50%) scale(0.4);
+    bottom: -50px;
   }
 }
